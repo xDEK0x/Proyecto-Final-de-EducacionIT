@@ -1,10 +1,21 @@
+# ====================================
+# .gitignore para Spring Boot Project
+# ====================================
+
+# ============== Documentación y Build ==============
 HELP.md
 target/
-!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# ============== Maven Wrappers ==============
+# Descomenta estas líneas si NO quieres subir los wrappers de Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# ============== Spring Tool Suite (STS) ==============
 .apt_generated
 .classpath
 .factorypath
@@ -13,13 +24,16 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
+# ============== IntelliJ IDEA ==============
 .idea
 *.iws
 *.iml
 *.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-### NetBeans ###
+# ============== NetBeans ==============
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -29,5 +43,111 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# ============== VS Code ==============
 .vscode/
+
+# ============== Eclipse ==============
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# ============== Configuraciones Sensibles ==============
+# NO subir archivos con datos sensibles (contraseñas, tokens, etc.)
+application-local.properties
+application-dev.properties
+application-prod.properties
+.env
+.env.local
+.env.development
+.env.production
+
+# ============== Logs ==============
+*.log
+logs/
+spring.log
+/log/
+
+# ============== Sistema Operativo ==============
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ============== Archivos Compilados ==============
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# ============== Base de Datos Local ==============
+*.db
+*.sqlite
+*.sqlite3
+/data/
+/db/
+
+# ============== Archivos Temporales ==============
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.cache/
+
+# ============== Node.js (si usas frontend) ==============
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.npm
+
+# ============== Archivos de Seguridad (CRÍTICO) ==============
+# ¡NUNCA subir archivos con credenciales!
+*.key
+*.pem
+*.p12
+*.jks
+*.keystore
+secrets/
+credentials/
+.secret
+secret.properties
+
+# ============== Coverage y Testing ==============
+coverage/
+.nyc_output/
+*.lcov
+.coverage
+htmlcov/
+test-results/
+junit/
+
+# ============== Gradle (por si cambias a Gradle) ==============
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# ============== Otros ==============
+*.pid
+*.seed
+*.pid.lock
+.idea_modules/
